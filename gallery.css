@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050814;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+header{
+    width:100%;
+    height:80px;
+    padding:0 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,8,20,.8);
+    backdrop-filter:blur(10px);
+    
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:70px;
+}
+.logo h2{
+    font-size:22px;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#bdbdbd;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#8a5cff;
+}
+
+.nav-btn button{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(135deg,#8a5cff,#5b2cff);
+}
+
+/* GALLERY PAGE */
+
+.gallery-page{
+    width:90%;
+    margin:120px auto 60px;
+}
+
+/* TITLE */
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.gallery-title h1{
+    font-size:50px;
+    color:white;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+.gallery-title p{
+    color:#cfcfcf;
+    font-size:18px;
+}
+
+/* BUTTONS */
+
+.gallery-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:50px;
+}
+
+.gallery-buttons a{
+    text-decoration:none;
+    color:white;
+    padding:12px 25px;
+    border:1px solid #8a5cff;
+    border-radius:30px;
+    transition:.4s;
+}
+
+.gallery-buttons a:hover{
+    background:#8a5cff;
+    box-shadow:0 0 15px rgba(138,92,255,.5);
+}
+
+/* GALLERY GRID */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* CARD */
+
+.gallery-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.gallery-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+/* HOVER EFFECT */
+
+.gallery-card:hover img{
+    transform:scale(1.1);
+}
+
+/* OVERLAY */
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:20px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    text-align:center;
+}
+
+.overlay h3{
+    color:white;
+    font-size:22px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-title h1{
+        font-size:35px;
+    }
+
+}
+
+/* FOOTER MAIN */
+
+.footer-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+/* BRAND */
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:30%;
+}
+
+.footer-brand img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.footer-brand h2{
+    color:white;
+    font-size:22px;
+    margin:0 0 4px;
+}
+
+.footer-brand p{
+    color:#999;
+    font-size:11px;
+    margin:0;
+}
+
+/* QUOTE */
+
+.footer-quote{
+    width:35%;
+}
+
+.footer-quote h3{
+    color:#ffffff;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.footer-quote p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* SPACE FACT */
+
+.space-fact{
+    width:30%;
+    padding:18px 20px;
+    border:1px solid rgba(138,92,255,.35);
+    border-radius:15px;
+    background:rgba(138,92,255,.06);
+}
+
+.space-fact h3{
+    color:#ffffff;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.space-fact p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.space-fact strong{
+    color:#b99cff;
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#777;
+    font-size:12px;
+}

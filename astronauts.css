@@ -1,0 +1,424 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#050814;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* HEADER */
+
+header{
+    width:100%;
+    height:82px;
+    padding:0 4%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(5,8,20,.92);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:70px;
+    /* height:45px;
+    object-fit:contain; */
+}
+
+.logo-text h2{
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#aaa;
+    margin-top:2px;
+}
+
+
+/* NAVIGATION */
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:#eee;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#9b6cff;
+}
+
+
+/* BUTTON */
+
+.nav-btn button{
+    border:none;
+    padding:11px 22px;
+    border-radius:25px;
+    color:white;
+    background:linear-gradient(135deg,#6541ff,#9b5cff);
+    cursor:pointer;
+    font-size:17px;
+}
+
+
+/* PAGE HEADING */
+
+.astronaut-heading{
+    text-align:center;
+    padding:65px 20px 40px;
+}
+
+.astronaut-heading h1{
+    font-size:44px;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.astronaut-heading p{
+    max-width:650px;
+    margin:auto;
+    color:#bfc2cf;
+    font-size:16px;
+    line-height:1.6;
+}
+
+
+/* ASTRONAUT SECTION */
+
+.astronaut-section{
+    width:88%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+}
+
+
+/* ASTRONAUT CARD */
+
+.astronaut-card{
+    display:flex;
+    min-height:310px;
+    background:rgba(17,21,35,.9);
+    border:1px solid rgba(145,100,255,.22);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.astronaut-card:hover{
+    transform:translateY(-5px);
+    border-color:#855cff;
+    box-shadow:0 10px 35px rgba(104,70,255,.18);
+}
+
+
+/* IMAGE */
+
+.astronaut-image{
+    width:43%;
+    min-height:310px;
+    overflow:hidden;
+}
+
+.astronaut-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.astronaut-card:hover .astronaut-image img{
+    transform:scale(1.05);
+}
+
+
+/* INFORMATION */
+
+.astronaut-info{
+    width:57%;
+    padding:24px;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:15px;
+    background:rgba(125,79,255,.15);
+    color:#a87cff;
+    font-size:9px;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.astronaut-info h2{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.role{
+    color:#9b6cff;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.astronaut-info > p:not(.role){
+    color:#c5c7d0;
+    font-size:13px;
+    line-height:1.6;
+}
+
+
+/* LEARN BOX */
+
+.learn{
+    margin-top:18px;
+    padding:13px;
+    border-left:3px solid #895cff;
+    background:rgba(137,92,255,.07);
+}
+
+.learn h3{
+    font-size:13px;
+    color:#a97cff;
+    margin-bottom:5px;
+}
+
+.learn p{
+    color:#c9cad2;
+    font-size:11px;
+    line-height:1.5;
+}
+
+
+/* LEARNING SECTION */
+
+.learning-section{
+    width:88%;
+    max-width:1200px;
+    margin:65px auto 70px;
+    text-align:center;
+}
+
+.learning-section > h2{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.learning-section > p{
+    max-width:700px;
+    margin:auto;
+    color:#bfc2cf;
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* LEARNING CARDS */
+
+.learning-cards{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.learning-cards div{
+    padding:22px 15px;
+    background:#101421;
+    border:1px solid rgba(145,100,255,.18);
+    border-radius:15px;
+    transition:.3s;
+}
+
+.learning-cards div:hover{
+    border-color:#855cff;
+    transform:translateY(-4px);
+}
+
+.learning-cards span{
+    font-size:25px;
+}
+
+.learning-cards h3{
+    color:#a276ff;
+    margin:10px 0 7px;
+    font-size:17px;
+}
+
+.learning-cards p{
+    color:#bbb;
+    font-size:12px;
+    line-height:1.5;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#090e1d;
+}
+
+.footer-main{
+    min-height:170px;
+    padding:35px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.footer-brand img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.footer-brand h2{
+    font-size:17px;
+}
+
+.footer-brand p{
+    color:#999;
+    font-size:9px;
+}
+
+.footer-quote,
+.space-fact{
+    max-width:300px;
+}
+
+.footer-quote h3,
+.space-fact h3{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.footer-quote p,
+.space-fact p{
+    color:#aaa;
+    font-size:11px;
+    line-height:1.5;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:12px;
+    border-top:1px solid rgba(255,255,255,.07);
+}
+
+.footer-bottom p{
+    color:#888;
+    font-size:10px;
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .astronaut-section{
+        grid-template-columns:1fr;
+    }
+
+    .learning-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        height:auto;
+        padding:15px 5%;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    nav{
+        order:3;
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .astronaut-heading{
+        padding-top:40px;
+    }
+
+    .astronaut-heading h1{
+        font-size:30px;
+    }
+
+    .astronaut-card{
+        flex-direction:column;
+    }
+
+    .astronaut-image,
+    .astronaut-info{
+        width:100%;
+    }
+
+    .astronaut-image{
+        height:280px;
+        min-height:0;
+    }
+
+    .learning-cards{
+        grid-template-columns:1fr;
+    }
+
+    .footer-main{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}

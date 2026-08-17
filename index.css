@@ -1,0 +1,814 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #070b1d;
+}
+.hero{
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+.hero-text{
+    width:45%;
+    color:white;
+    margin-left:30px;
+    margin-top: 100px;
+    transform:translateY(-60px);
+
+    animation: heroReveal 1.5s ease-out;
+}
+
+@keyframes heroReveal{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(-60px);
+    }
+}
+/* .hero-image{
+    width:40%;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+} */
+
+.hero-image{
+    width:40%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    animation: astronautReveal 1.8s ease-out;
+}
+
+@keyframes astronautReveal{
+
+    from{
+        opacity:0;
+        transform:translateX(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+.hero-image img{
+    width:380px;
+    max-width: 100%;
+    height:auto;
+     position:relative;
+    top:80px;     
+    left:15px;
+}
+h1{
+    font-size: 60px;
+}
+
+
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    flex:1;
+    gap:10px;
+}
+
+.logo img{
+    width:70px;
+}
+
+.logo h2{
+    color:white;
+    margin:0;
+    font-size:20px;
+}
+
+.logo-text p{
+     margin:0;
+    font-size:10px;
+    color:#bdbdbd;
+}
+nav{
+    display:flex;
+    gap:25px;
+    justify-content: center;
+    flex:2;
+     white-space: nowrap;
+}
+
+ nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    padding:5px 8px;
+    border-radius:20px;
+    transition:0.3s;
+    
+}
+
+nav a:hover{
+    background:#8a5cff;
+    border: 2px solid white;
+}
+.nav-btn{
+   
+    cursor:pointer;
+     flex:1;
+    display:flex;
+    justify-content: flex-end;
+}
+.hero-content{
+    display:flex;
+    /* justify-content:space-between; */
+     transform:translateY(-60px);
+    align-items:center;
+     min-height:80vh;
+     padding:0 40px; 
+    /* margin-top:-80px; */
+}
+.nav-btn button{
+    color: azure;
+    margin-right:50px ;
+    width:100px;
+    height: 40px;
+   background: linear-gradient(135deg, transparent,#8a5cff, #5b2cff,transparent);
+    
+    border-radius: 20px;
+    
+    cursor: pointer;
+}
+.explore-btn,.trailer-btn{
+    color: azure;
+    border-radius: 20px;
+    width:100px;
+    height: 40px;
+    background: linear-gradient(transparent,#8a5cff,navy,transparent);
+}
+
+.features{
+    display:flex;
+    justify-content:space-between;
+    gap:25px;
+    padding:40px 50px;
+    background:#070b1d;
+}
+
+.feature-card{
+    width:24%;
+    padding:25px;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:15px;
+    background:rgba(255,255,255,0.04);
+    transition:0.3s;
+    padding: 25px;
+    text-align: center;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    border-color:#8a5cff;
+}
+
+.feature-card img{
+    width:120px;
+    margin-bottom:15px;
+    height: 120px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.feature-card h3{
+    margin-bottom:12px;
+    font-size: 20px;
+    color: #beabef;
+}
+
+.feature-card p{
+    color:#cfcfcf;
+    font-size:15px;
+    line-height:20px;
+}
+
+.planets{
+    padding: 40px 50px;
+    background:#050814;
+}
+
+.section-title{
+    text-align:center;
+    color:white;
+    font-size:24px;
+    margin-bottom:35px;
+    letter-spacing:2px;
+    position:relative;
+}
+
+
+.section-title::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 22%;   
+    width: 140px;
+    height: 2px;
+    background: #8a5cff;
+}
+
+.section-title::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22%;  
+    width: 140px;
+    height: 2px;
+    background: #8a5cff;
+}
+.planet-container{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.planet-card{
+    background:#0c1024;
+    border:1px solid #252c4a;
+    border-radius:15px;
+    width:24%;
+    padding:20px;
+    transition:0.4s;
+}
+
+.planet-card:hover{
+    transform:translateY(-8px);
+    border-color:#8a5cff;
+    box-shadow:0 0 20px rgba(138,92,255,0.4);
+}
+
+.planet-card img{
+    width:140px;
+    height:140px;
+    display:block;
+    margin:0 auto 20px;
+    transition:0.4s;
+}
+
+.planet-card:hover img{
+    transform:scale(1.08);
+}
+
+.planet-card h3{
+    color:white;
+    font-size:24px;
+    margin-bottom:10px;
+    text-align: center;
+}
+
+.planet-card p{
+    color:#bdbdbd;
+    font-size:15px;
+    line-height:1.6;
+    text-align: center;
+}
+
+.view-btn{
+    display:block;
+    text-align:right;
+    margin-top:25px;
+    color:#49b5ff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.view-btn:hover{
+    color:#8a5cff;
+}
+
+
+.cta{
+    width: 95%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px;
+    margin:40px 30px;
+    /* border: 0.5px solid white; */
+    box-shadow: 0 0 30px 3px rgb(22, 22, 57);
+    background:linear-gradient(90deg,#070b1d,#0d1333);
+     border-radius:20px;
+     overflow: hidden;
+}
+
+.cta-content{
+    width:45%;
+}
+
+.cta-content h2{
+    font-size:36px;
+    color:white;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+
+.cta-content p{
+    color:#cfcfcf;
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.cta-content button{
+    background:linear-gradient(135deg,#8a5cff,#4b3cff);
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.cta-content button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(138,92,255,.5);
+}
+
+.cta-image{
+    width:50%;
+    display:flex;
+    justify-content:center;
+}
+
+.cta-image img{
+    width:100%;
+    border-radius: 15px;
+    display: block;
+     box-shadow:0 0 25px rgba(138,92,255,.3);
+    transition:0.5s;
+}
+
+.cta-image img:hover{
+    transform:translateY(-15px);
+}
+/* =========================
+   FOOTER
+========================= */
+
+.space-footer{
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(138,92,255,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(73,181,255,.08),
+            transparent 30%
+        ),
+
+        #070b1d;
+
+    border-top:
+        1px solid
+        rgba(138,92,255,.35);
+
+    padding:
+        60px 6% 20px;
+
+    margin-top:50px;
+}
+
+
+/* =========================
+   FOOTER CONTENT
+========================= */
+
+.footer-content{
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:space-between !important;
+    align-items:flex-start !important;
+    width:100% !important;
+    gap:50px !important;
+}
+
+   
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand{
+
+    width:100%;
+}
+
+
+.brand-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+
+.brand-top img{
+
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+}
+
+
+.brand-top h2{
+
+    color:white;
+
+    font-size:24px;
+
+    margin:0 0 4px;
+}
+
+
+.brand-top p{
+
+    color:#999;
+
+    font-size:15px;
+
+    margin:0;
+}
+
+
+/* DESCRIPTION */
+
+.footer-description{
+
+    color:#aaa;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    max-width:600px;
+
+    margin-top:25px;
+}
+
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.footer-links h3{
+
+    color:#b99cff;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+}
+
+
+.footer-links a{
+
+    display:block;
+
+    color:#bbb;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    margin-bottom:14px;
+
+    transition:.3s;
+}
+
+
+.footer-links a:hover{
+
+    color:#8a5cff;
+
+    transform:translateX(5px);
+}
+
+
+/* =========================
+   SPACE FACT
+========================= */
+
+.space-fact{
+
+    margin-top:45px;
+
+    padding:25px 28px;
+
+    border:
+        1px solid
+        rgba(138,92,255,.35);
+
+    border-radius:16px;
+
+    background:
+        rgba(138,92,255,.05);
+}
+
+
+.space-fact h3{
+
+    color:white;
+
+    font-size:17px;
+
+    margin-bottom:12px;
+}
+
+
+.space-fact p{
+
+    color:#aaa;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin-bottom:15px;
+}
+
+
+.space-fact a{
+
+    color:#49b5ff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+
+.space-fact a:hover{
+
+    color:#8a5cff;
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom{
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+
+    margin-top:45px;
+
+    padding-top:20px;
+
+    text-align:center;
+}
+
+
+.footer-bottom p{
+
+    color:#777;
+
+    font-size:15px;
+
+    margin-bottom:8px;
+}
+
+
+.footer-bottom span{
+
+    color:#888;
+
+    font-size:15px;
+}
+/* =========================
+   HOME PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* HEADER */
+
+    header{
+        flex-direction:column;
+        height:auto;
+        padding:10px;
+        gap:12px;
+    }
+
+    /* LOGO */
+
+    .logo{
+        width:100%;
+        justify-content:center;
+    }
+
+    .logo img{
+        width:50px;
+    }
+
+    .logo h2{
+        font-size:17px;
+    }
+
+    .logo-text p{
+        font-size:8px;
+    }
+
+    /* NAVBAR */
+
+    nav{
+        width:100%;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:5px;
+    }
+
+    nav a{
+        font-size:11px;
+        padding:5px 6px;
+    }
+
+    /* NAV BUTTON */
+
+    .nav-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .nav-btn button{
+        margin:0;
+        width:100px;
+        height:34px;
+    }
+
+
+    /* HERO */
+
+    .hero{
+        min-height:auto;
+        background-position:center;
+        padding-bottom:40px;
+    }
+
+    .hero-content{
+        flex-direction:column;
+        min-height:auto;
+        padding:40px 20px;
+        transform:none;
+        text-align:center;
+    }
+
+    .hero-text{
+        width:100%;
+        margin:0;
+        transform:none;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    .hero-image{
+        width:100%;
+        justify-content:center;
+        margin-top:25px;
+    }
+
+    .hero-image img{
+        width:280px;
+        max-width:90%;
+        top:0;
+        left:0;
+    }
+
+
+    /* FEATURES */
+
+    .features{
+        flex-direction:column;
+        gap:20px;
+        padding:30px 20px;
+    }
+
+    .feature-card{
+        width:100%;
+    }
+
+
+    /* PLANETS */
+
+    .planets{
+        padding:30px 20px;
+    }
+
+    .section-title{
+        font-size:20px;
+        margin-bottom:25px;
+    }
+
+    .section-title::before,
+    .section-title::after{
+        display:none;
+    }
+
+    .planet-container{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .planet-card{
+        width:100%;
+    }
+
+    .planet-card img{
+        width:120px;
+        height:120px;
+    }
+
+
+    /* CTA */
+
+    .cta{
+        width:auto;
+        margin:30px 20px;
+        padding:25px 20px;
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .cta-content{
+        width:100%;
+        text-align:center;
+    }
+
+    .cta-content h2{
+        font-size:28px;
+    }
+
+    .cta-content p{
+        font-size:17px;
+    }
+
+    .cta-image{
+        width:100%;
+    }
+
+}
+
+.main-footer{
+    padding:50px 25px 20px;
+}
+
+.footer-content{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.footer-bottom{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+}
