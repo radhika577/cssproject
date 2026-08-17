@@ -1,0 +1,618 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050814;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    height:80px;
+    padding:0 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,8,20,.8);
+    backdrop-filter:blur(10px);
+    
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:70px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#bdbdbd;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#8a5cff;
+}
+
+.nav-btn button{
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(135deg,#8a5cff,#5b2cff);
+}
+
+/* SOLAR SYSTEM */
+
+.solar-system{
+    position:relative;
+    width:100%;
+    height:800px;
+    margin-top: 0;
+    overflow:hidden;
+
+    background-image:url("solarbg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* SUN */
+
+.sun{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90px;
+    height:90px;
+}
+
+.sun img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    filter:drop-shadow(0 0 25px orange);
+}
+
+/* COMMON ORBIT */
+
+.orbit{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+}
+
+@keyframes rotate{
+    from{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+        transform:translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+/* MERCURY */
+
+.mercury-orbit{
+    width:140px;
+    height:140px;
+    animation:rotate 6s linear infinite;
+}
+
+.mercury{
+    position:absolute;
+    top:-9px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.mercury img{
+    width:18px;
+}
+
+/* VENUS */
+
+.venus-orbit{
+    width:200px;
+    height:200px;
+    animation:rotate 9s linear infinite;
+}
+
+.venus{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.venus img{
+    width:24px;
+}
+
+/* EARTH */
+
+.earth-orbit{
+    width:270px;
+    height:270px;
+    animation:rotate 12s linear infinite;
+}
+
+.earth{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.earth img{
+    width:30px;
+}
+
+.moon-orbit{
+    position:absolute;
+    width:50px;
+    height:50px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:rotate 3s linear infinite;
+}
+
+.moon{
+    position:absolute;
+    top:-4px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.moon img{
+    width:8px;
+}
+
+/* MARS */
+
+.mars-orbit{
+    width:340px;
+    height:340px;
+    animation:rotate 16s linear infinite;
+}
+
+.mars{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.mars img{
+    width:24px;
+}
+
+/* JUPITER */
+
+.jupiter-orbit{
+    width:430px;
+    height:430px;
+    animation:rotate 22s linear infinite;
+}
+
+.jupiter{
+    position:absolute;
+    top:-22px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.jupiter img{
+    width:45px;
+}
+
+/* SATURN */
+
+.saturn-orbit{
+    width:520px;
+    height:520px;
+    animation:rotate 28s linear infinite;
+}
+
+.saturn{
+    position:absolute;
+    top:-20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.saturn img{
+    width:42px;
+}
+
+/* URANUS */
+
+.uranus-orbit{
+    width:620px;
+    height:620px;
+    animation:rotate 34s linear infinite;
+}
+
+.uranus{
+    position:absolute;
+    top:-17px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.uranus img{
+    width:34px;
+}
+
+/* NEPTUNE */
+
+.neptune-orbit{
+    width:720px;
+    height:720px;
+    animation:rotate 40s linear infinite;
+}
+
+.neptune{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.neptune img{
+    width:36px;
+}
+
+/* FOOTER */
+
+/* =========================
+   SPACE FOOTER
+========================= */
+
+.space-footer{
+    background:
+        radial-gradient(circle at 20% 50%,
+        rgba(138,92,255,.12),
+        transparent 30%),
+
+        radial-gradient(circle at 80% 50%,
+        rgba(73,181,255,.10),
+        transparent 30%),
+
+        #070b1d;
+
+    border-top:1px solid rgba(138,92,255,.35);
+    padding:45px 60px 20px;
+    position:relative;
+}
+
+/* FOOTER MAIN */
+
+.footer-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+/* BRAND */
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:30%;
+}
+
+.footer-brand img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.footer-brand h2{
+    color:white;
+    font-size:22px;
+    margin:0 0 4px;
+}
+
+.footer-brand p{
+    color:#999;
+    font-size:11px;
+    margin:0;
+}
+
+/* QUOTE */
+
+.footer-quote{
+    width:35%;
+}
+
+.footer-quote h3{
+    color:#ffffff;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.footer-quote p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* SPACE FACT */
+
+.space-fact{
+    width:30%;
+    padding:18px 20px;
+    border:1px solid rgba(138,92,255,.35);
+    border-radius:15px;
+    background:rgba(138,92,255,.06);
+}
+
+.space-fact h3{
+    color:#ffffff;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.space-fact p{
+    color:#aaa;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.space-fact strong{
+    color:#b99cff;
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:35px;
+    padding-top:18px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#777;
+    font-size:12px;
+}
+
+
+
+
+/* =========================
+   SOLAR SYSTEM RESPONSIVE
+========================= */
+
+@media (max-width: 600px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* HEADER */
+
+    header{
+        position:relative;
+        height:auto;
+        padding:10px;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .logo{
+        justify-content:center;
+    }
+
+    .logo img{
+        width:50px;
+    }
+
+    .logo h2{
+        font-size:18px;
+    }
+
+    .logo-text p{
+        font-size:9px;
+    }
+
+    nav{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:6px;
+    }
+
+    nav a{
+        font-size:11px;
+        padding:4px 5px;
+    }
+
+    .nav-btn{
+        display:flex;
+        justify-content:center;
+        width:100%;
+    }
+
+    .nav-btn button{
+        padding:8px 16px;
+        font-size:11px;
+    }
+
+
+    /* SOLAR SYSTEM */
+
+    .solar-system{
+        width:100%;
+        height:600px;
+        margin-top:0;
+        overflow:hidden;
+    }
+
+
+    /* SUN */
+
+    .sun{
+        width:60px;
+        height:60px;
+    }
+
+
+    /* ORBITS */
+
+    .mercury-orbit{
+        width:100px;
+        height:100px;
+    }
+
+    .venus-orbit{
+        width:145px;
+        height:145px;
+    }
+
+    .earth-orbit{
+        width:195px;
+        height:195px;
+    }
+
+    .mars-orbit{
+        width:250px;
+        height:250px;
+    }
+
+    .jupiter-orbit{
+        width:310px;
+        height:310px;
+    }
+
+    .saturn-orbit{
+        width:370px;
+        height:370px;
+    }
+
+    .uranus-orbit{
+        width:440px;
+        height:440px;
+    }
+
+    .neptune-orbit{
+        width:510px;
+        height:510px;
+    }
+
+
+    /* PLANETS */
+
+    .mercury img{
+        width:14px;
+    }
+
+    .venus img{
+        width:18px;
+    }
+
+    .earth img{
+        width:24px;
+    }
+
+    .mars img{
+        width:20px;
+    }
+
+    .jupiter img{
+        width:34px;
+    }
+
+    .saturn img{
+        width:32px;
+    }
+
+    .uranus img{
+        width:26px;
+    }
+
+    .neptune img{
+        width:27px;
+    }
+
+
+    /* MOON */
+
+    .moon-orbit{
+        width:38px;
+        height:38px;
+    }
+
+    .moon img{
+        width:6px;
+    }
+
+
+    /* FOOTER */
+
+    .space-footer{
+        padding:30px 20px 15px;
+    }
+
+    .footer-main{
+        flex-direction:column;
+        gap:25px;
+        text-align:center;
+    }
+
+    .footer-brand{
+        width:100%;
+        justify-content:center;
+    }
+
+    .footer-quote{
+        width:100%;
+    }
+
+    .space-fact{
+        width:100%;
+    }
+
+    .footer-bottom{
+        margin-top:25px;
+        padding-top:15px;
+    }
+
+}
